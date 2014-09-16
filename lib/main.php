@@ -14,12 +14,14 @@ function app_invocation_url ( )
 }
 
 class MyAppUI {
-  function html_header {
+  protected $prv_yet_to_init = false;
+  
+  public function html_header ( ) {
     echo "<!DOCTYPE html>\n";
     echo "<html manifest = \"manifest.apache\">\n";
     echo "<body>\n";
   }
-  function html_footer {
+  public function html_footer ( ) {
     echo "</body>\n";
     echo "</html>\n";
   }
